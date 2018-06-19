@@ -28,6 +28,8 @@ Works on any Linux/UNIX or Windows system running Perl 5.22 or higher.
 n/a
 
 ## Installation
+### Where to get the files
+The files are available to CA customers via [KB Article KB000094185](https://comm.support.ca.com/kb/can-ca-apm-monitor-400-and-500-class-http-status-codes-in-ca-apim-gateway/KB000094185)
 ### EPAgent
 Copy **ssgLogReader.pl** and **ssgLogReader.cfg** to ***\<agent_home\>\/epaplugins\/apim***.  
 Copy **LogReader.pm** to ***\<agent_home\>\/epaplugins\/lib\/perl\/Wily***.  
