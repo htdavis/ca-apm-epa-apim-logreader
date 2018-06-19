@@ -1,7 +1,7 @@
 # CA APM Log Monitor for CA API Gateway Integration through CA Precision API Monitoring
 
 # Description
-This is a log monitor reports the number of HTTP 4xx and 5xx events by Gateway and Service.
+This is a log monitor plugin that reports the number of HTTP 4xx and 5xx events by Gateway and Service.
 
 ## Short Description
 Log Monitor for HTTP events.
