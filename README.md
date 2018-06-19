@@ -15,7 +15,7 @@ n/a
 Works on any Linux/UNIX or Windows system running Perl 5.22 or higher.
 
 ## License
-[Apache License 2.0](LICENSE)
+[Eclipse Public License 2.0](https://www.eclipse.org/legal/epl-2.0/)
 
 # Installation Instructions
 
