@@ -20,7 +20,7 @@ Works on any Linux/UNIX or Windows system running Perl 5.22 or higher.
 # Installation Instructions
 
 ## Prerequisites
-* CA APM 10.x Environment Peformance Agent (EPAgent) or Infrastructure Agent (APMIA)
+* CA APM 9.7, 10.x Environment Peformance Agent (EPAgent) or Infrastructure Agent (APMIA)
 * Java Runtime Environment 8 or higher for the agent
 * Perl 5.22 or higher
 
@@ -35,19 +35,28 @@ Copy **ssgLogReader.pl** and **ssgLogReader.cfg** to ***\<agent_home\>\/epaplugi
 Copy **LogReader.pm** to ***\<agent_home\>\/epaplugins\/lib\/perl\/Wily***.  
 The Perl module has been customized to allow for multiple values to be tokenized from the log message.
 
-### Infrastructure Agent
-TBD
+### APMIA
+Copy **ssgLogReader.pl** and **ssgLogReader.cfg** to ***\<agent_home\>\/extensions\/apim***.  
+Copy **LogReader.pm** to ***\<agent_home\>\/extensions\/lib\/perl\/Wily***.  
+The Perl module has been customized to allow for multiple values to be tokenized from the log message.
 
 ## Configuration
 Log readers are stateful plugins; programs that run continuously at the start of the monitor agent.  
 At least one plugin must be configured per logfile to be monitored.
 
+### PAPIM
+Follow the directions in the KB article to setup your policy
+
+### EPAgent
+Follow the directions in the KB article
+
+### APMIA
+Add the following lines to ***\<agent_home\>/core/config/IntroscopeAgent.profile***
+* introscope.epagent.plugins.stateful.names=APIM
+* introscope.epagent.stateful.APIM.command=perl {ApmExtensionHome}/apim/ssgLogReader.pl -sleepTime 15 -logfileDir "\<apim-installdir\>/logs/" -logfile ssg_0_0.log -configfile {ApmExtensionHome}/apim/ssgLogReader.cfg
 
 # Usage Instructions
-
-## TBD
-
-
+See details in the KB article to see images of the metrics in the Investigator.
 
 ## Debugging and Troubleshooting
 Check the log file written by the individual scripts.
