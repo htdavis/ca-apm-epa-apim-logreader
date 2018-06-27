@@ -21,7 +21,7 @@ Works on any Linux/UNIX or Windows system running Perl 5.22 or higher.
 
 ## Prerequisites
 * CA APM 9.7, 10.x Environment Peformance Agent (EPAgent) or Infrastructure Agent (APMIA)
-* Java Runtime Environment 8 or higher for the agent
+* Java Runtime Environment 8 or higher for the EPAgent (APMIA comes bundled with a JRE)
 * Perl 5.22 or higher
 
 ## Dependencies
