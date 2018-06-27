@@ -44,7 +44,7 @@ The Perl module has been customized to allow for multiple values to be tokenized
 Log readers are stateful plugins; programs that run continuously at the start of the monitor agent.  
 At least one plugin must be configured per logfile to be monitored.
 
-### PAPIM
+### APIM
 Follow the directions in the KB article to setup your policy
 
 ### EPAgent
@@ -53,7 +53,7 @@ Follow the directions in the KB article
 ### APMIA
 Add the following lines to ***\<agent_home\>/core/config/IntroscopeAgent.profile***
 * introscope.epagent.plugins.stateful.names=APIM
-* introscope.epagent.stateful.APIM.command=perl {ApmExtensionHome}/apim/ssgLogReader.pl -sleepTime 15 -logfileDir "\<apim-installdir\>/logs/" -logfile ssg_0_0.log -configfile {ApmExtensionHome}/apim/ssgLogReader.cfg
+* introscope.epagent.stateful.APIM.command=perl {ApmExtensionHome}/apim/ssgLogReader.pl -sleepTime 30 -logfileDir "\<apim-logdir\>/" -logfile ssg_0_0.log -configfile {ApmExtensionHome}/apim/ssgLogReader.cfg
 
 # Usage Instructions
 See details in the KB article to see images of the metrics in the Investigator.
